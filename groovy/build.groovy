@@ -1,4 +1,4 @@
-pipeline ("Site") {
+pipelineJob ("Site") {
   logRatotor {
     numToKeep (10)
   }
