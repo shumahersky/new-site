@@ -1,5 +1,5 @@
 pipelineJob ("Site") {
-  logRatotor {
+  logRotator {
     numToKeep (10)
   }
   environment {
