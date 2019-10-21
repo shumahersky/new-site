@@ -1,13 +1,10 @@
-pipelineJob ("Site") {
-    logRotator {
-          numToKeep (10)
-    }
-  environmentVariables {
+pipelineJob {
+  environment {
     registry = "shumahersky1985/labs"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
-  //agent any
+  agent any
       stages {
         stage ('Clone') {
             steps {
@@ -30,17 +27,17 @@ pipelineJob ("Site") {
             }
           }
         }
-            stage('Remove Unused docker image') {
+        stage('Remove Unused docker image') {
           steps{
             sh "docker rmi $registry:$BUILD_NUMBER"
           }
         }
 
-       stage('Docker Prune') {
+        stage('Docker Prune') {
           steps {
             sh "docker image prune -fa"
             deleteDir()
           }
-       }
+        }
       }
 }
