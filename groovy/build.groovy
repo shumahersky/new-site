@@ -2,11 +2,7 @@ pipelineJob ("Site") {
   logRotator {
     numToKeep (10)
   }
-  environment {
-    registry = "shumahersky1985/labs"
-    registryCredential = 'dockerhub'
-    dockerImage = ''
-  }
+
   agent any
   stages {
     stage ('Clone') {
