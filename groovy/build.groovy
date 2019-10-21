@@ -2,7 +2,7 @@ pipelineJob ("Site") {
     logRotator {
           numToKeep (10)
     }
-  environment {
+  environmentVariables {
     registry = "shumahersky1985/labs"
     registryCredential = 'dockerhub'
     dockerImage = ''
