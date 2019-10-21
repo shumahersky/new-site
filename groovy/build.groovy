@@ -1,7 +1,7 @@
 pipelineJob ("Site") {
-  logRotator {
-    numToKeep (10)
-  }
+    logRotator {
+          numToKeep (10)
+    }
   environment {
     registry = "shumahersky1985/labs"
     registryCredential = 'dockerhub'
@@ -40,7 +40,7 @@ pipelineJob ("Site") {
       steps {
         sh "docker image prune -fa"
         deleteDir()
-      }
-    }
+   }
+  }
   }
 }
