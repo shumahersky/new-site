@@ -7,7 +7,7 @@ pipelineJob ("Site") {
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
-   agent any
+  //agent any
       stages {
         stage ('Clone') {
             steps {
