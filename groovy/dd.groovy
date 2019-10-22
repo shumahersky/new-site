@@ -14,12 +14,12 @@ pipelineJob("test-pipeline") {
    			scm {
             	git {
                   remote {
-                        github("dgadavin/devops-course-itea", 'https')
+                        github("shumahersky/new-site", 'https')
                         branch("master")
                   }
               }
         }
-        scriptPath("jenkins/Jenkinsfile")
+        scriptPath("groovy/Jenkinsfile")
       }
 
     }
